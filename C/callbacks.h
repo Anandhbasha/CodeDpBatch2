@@ -1,0 +1,1 @@
+int total(int,int,int,int,int);
