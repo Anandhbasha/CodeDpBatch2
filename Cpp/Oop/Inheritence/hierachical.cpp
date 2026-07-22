@@ -29,3 +29,13 @@ int main(){
 
 // Grand parent 
 // Dad    Uncle  aunt
+
+
+// private
+// class dad ->private->class property or function
+// class child:public dad 
+// protected
+// class dad ->protected->class property or function
+// class child:public dad 
+// public
+// int main and also use class
