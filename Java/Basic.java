@@ -44,3 +44,6 @@ public class Basic{
 // Faster                                                           Slightly Slower
 // Cannot Call method                                               Call method 
 // after assignmnet operator hold a single value                    // after assignmnet operator hold a Multiple value
+
+
+// javaProgram->Compiler->Covert to Bytecode ->class-> Java Virutal Machine->Intepter->machine code -> output
