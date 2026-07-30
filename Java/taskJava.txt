@@ -1,0 +1,392 @@
+# Task 1 - Login Validation
+
+Concepts: String, if-else
+
+Input:
+
+
+Username
+Password
+
+
+Conditions:
+
+* username = "admin"
+* password = "12345"
+
+Output:
+
+
+Login Success
+
+
+or
+
+
+Invalid Credentials
+
+
+
+
+# Task 2 - Reverse String
+
+Concepts: Loop + String
+
+Input
+
+
+Hello
+
+
+Output
+
+
+olleH
+
+# Task 3 - Count Vowels
+
+Concepts: String + Loop + if
+
+Input
+
+
+Programming
+
+
+Output
+
+
+Vowels = 3
+
+
+
+
+# Task 4 - Palindrome String
+
+Input
+
+
+madam
+
+
+Output
+
+
+Palindrome
+
+
+Else
+
+
+Not Palindrome
+
+
+
+
+# Task 5 - Password Strength Checker
+
+Input Password
+
+Conditions
+
+* Length >=8
+* Contains Number
+
+Output
+
+
+Strong Password
+
+
+Else
+
+
+Weak Password
+
+
+
+
+# Task 6 - Student Grade
+
+Input
+
+
+Student Name
+Mark
+
+
+Conditions
+
+90+
+
+
+A Grade
+
+
+75+
+
+
+B Grade
+
+
+60+
+
+
+C Grade
+
+
+Else
+
+
+Fail
+
+
+
+
+# Task 7 - Count Uppercase and Lowercase
+
+Input
+
+
+JaVaProGram
+
+
+Output
+
+
+Uppercase : 5
+Lowercase : 6
+
+
+
+
+# Task 8 - Remove Spaces
+
+Input
+
+
+Java Programming Language
+
+
+Output
+
+
+JavaProgrammingLanguage
+
+
+
+
+# Task 9 - Find Longest Word
+
+Input
+
+
+Java is Object Oriented Programming
+
+
+Output
+
+
+Programming
+
+
+
+
+# Task 10 - ATM PIN (3 Attempts)
+
+Input PIN
+
+Correct PIN
+
+
+1234
+
+
+Maximum attempts
+
+
+3
+
+
+Output
+
+
+Access Granted
+
+
+or
+
+
+Card Blocked
+
+
+
+
+# Task 11 - Mobile Battery Simulation
+
+Battery =100
+
+Menu
+
+
+1.Play Game (-25)
+
+2.Watch Video (-15)
+
+3.Call (-10)
+
+4.Exit
+
+
+Continue until battery becomes 0.
+
+
+
+# Task 12 - Shopping Bill
+
+Input
+
+
+Product Name
+Price
+Quantity
+
+
+Calculate
+
+
+Total
+
+GST =18%
+
+Final Bill
+
+
+
+
+# Task 13 - Constructor Practice
+
+Create class
+
+
+Student
+
+
+Variables
+
+
+id
+name
+department
+
+
+Using Constructor initialize values.
+
+Display
+
+
+Student Details
+
+
+
+
+# Task 14 - this Keyword Practice
+
+Create class
+
+
+Employee
+
+
+Variables
+
+
+id
+name
+salary
+
+
+Constructor parameters same name as variables.
+
+Use
+
+
+this.id=id;
+this.name=name;
+this.salary=salary;
+
+Display Employee Details.
+
+
+# Task 15 - Bank Account (Constructor + this + String + if)
+
+Create
+
+
+BankAccount
+
+
+Variables
+
+
+Account Holder
+Balance
+
+
+Constructor initialize values.
+
+Menu
+
+1.Deposit
+
+2.Withdraw
+
+3.Check Balance
+
+4.Exit
+
+Conditions
+
+* Withdraw only if balance is sufficient.
+* Otherwise print
+
+
+Insufficient Balance
+
+Student Management System
+
+Use:
+
+* Constructor
+* this keyword
+* String
+* if-else
+* for loop
+* Arrays
+
+Store 5 students
+
+Each Student contains
+
+
+ID
+
+Name
+
+Department
+
+Mark
+
+
+Menu
+
+
+1.View All Students
+
+2.Search Student by Name
+
+3.Display Pass Students
+
+4.Find Topper
+
+5.Exit
