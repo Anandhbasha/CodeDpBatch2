@@ -390,3 +390,275 @@ Menu
 4.Find Topper
 
 5.Exit
+
+
+
+
+Date::05/08/2026
+Task 1 - College Management (Association)
+
+Create two classes:
+
+Student
+College
+
+Requirements:
+
+One College can have many Students.
+Student object should exist even if College object is removed.
+Display:
+College Name
+Student Name
+Department
+
+Concept: Association
+
+Task 2 - Library System (Aggregation)
+
+Create
+
+Book
+Library
+
+Requirements:
+
+Library contains multiple Books.
+Same Book object can exist outside the Library.
+Add 10 books.
+Display all available books.
+Search book using Book ID.
+
+Concept: Aggregation
+
+Task 3 - Company Employee (Composition)
+
+Create
+
+Company
+Employee
+
+Requirements:
+
+Employee should only exist inside Company.
+Company constructor should automatically create Employee objects.
+Display employee details.
+
+Concept: Composition
+
+Task 4 - Hospital Management (Association + Overriding)
+
+Classes
+
+Doctor
+Patient
+Hospital
+
+Requirements
+
+Hospital has Doctors and Patients.
+Create method
+displayInfo()
+
+Override it in
+
+Doctor
+Patient
+
+Display customized information.
+
+Concepts
+
+Association
+Method Overriding
+Task 5 - Vehicle Rental (Overloading)
+
+Create class
+
+VehicleRental
+
+Overload method
+
+rentVehicle()
+
+Cases
+
+Car only
+Car + Days
+Car + Days + Driver
+
+Display total rental amount.
+
+Concept: Method Overloading
+
+Task 6 - Online Shopping (Overloading + Overriding)
+
+Create
+
+Product
+
+Subclasses
+
+Electronics
+Clothing
+Grocery
+
+Method
+
+calculatePrice()
+
+Override in all subclasses.
+
+Also overload
+
+calculatePrice(int qty)
+
+calculatePrice(int qty,double discount)
+
+calculatePrice(int qty,double discount,double gst)
+
+Concepts
+
+Overloading
+Overriding
+Task 7 - Bank Management (Composition)
+
+Create
+
+Bank
+Account
+
+Requirements
+
+Account object should be created only inside Bank.
+Store
+Account Number
+Customer Name
+Balance
+
+Methods
+
+Deposit
+Withdraw
+Check Balance
+
+Delete Bank object and observe why Account shouldn't exist.
+
+Concept: Composition
+
+Task 8 - School Management (Aggregation)
+
+Classes
+
+Teacher
+School
+
+Requirements
+
+Teacher can teach in another School later.
+Store 5 teachers.
+Find teacher by ID.
+Display subject handled.
+
+Concept: Aggregation
+
+Task 9 - Food Delivery App (Association + Overriding)
+
+Classes
+
+User
+Restaurant
+Order
+
+Requirements
+
+One User can order from many Restaurants.
+
+Method
+
+showOrder()
+
+Override in
+
+VegOrder
+NonVegOrder
+
+Display different order details.
+
+Concepts
+
+Association
+Overriding
+Task 10 - Car Showroom
+
+Classes
+
+Engine
+Car
+Showroom
+LuxuryCar
+SportsCar
+
+Requirements
+
+Car HAS-A Engine (Composition)
+Showroom HAS Cars (Aggregation)
+Customer visits Showroom (Association)
+Overload
+bookCar()
+
+Different versions
+
+bookCar()
+
+bookCar(String customer)
+
+bookCar(String customer,String color)
+
+bookCar(String customer,String color,String paymentMode)
+
+Override
+
+showFeatures()
+
+in
+
+LuxuryCar
+SportsCar
+
+Display complete booking summary.
+
+Concepts Used
+
+
+University ERP System
+
+Classes:
+
+University
+Department
+Professor
+Student
+Course
+Hostel
+Library
+
+Use:
+
+Association → Student ↔ Course
+Aggregation → University → Department
+Composition → Hostel → Room
+Overloading → registerCourse()
+Overriding → displayProfile() in Student, Professor, Admin
+
+Features:
+
+Add departments
+Add professors
+Add students
+Register courses
+Allocate hostel rooms
+Print university report
+Search by ID
+Count students in each department
+Show topper
+Display course-wise student list
