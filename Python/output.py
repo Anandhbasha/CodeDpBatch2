@@ -1,0 +1,1 @@
+print("Hello Welcome to python","This is Print statement of Python",sep="-")
