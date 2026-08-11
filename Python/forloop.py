@@ -55,11 +55,39 @@ l = (10,20,30,40,50,60)
 #     print("Key:",i,"value:",v)
 
 
-#    *
+#    
+# *
 #   ***
 #  *****
 # *******
 
+# rows = int(input("Enter the number of rows:"))
+
+# String = '*'
+
+# for i in range(1,rows+1):
+#     print(String*i)
+
+
+
+# n= int(input("Enter the no of rows:"))
+# # no of rows
+# # range(1,5)->1,2,3,4
+# # i=1
+# for i in range(1,n+1):
+#     # 
+#     print((" "*(n-i)+"*"*(2*i-1)))
+    # 2*i-1 = 1
+    # 2*i-1 = 3
+    # 2*i-1 = 5
+    # 2*i-1 = 7
+    # 4-i = 3
+    # 4-i ->4-2 = 2
+    # 4-i ->4-3 = 1
+    # 4-i ->4-4 = 0
+
+#    *
+# 
 # no of rows -> input
 # use only one for loop
 
@@ -67,11 +95,17 @@ l = (10,20,30,40,50,60)
 # 1234
 # 4321
 
+# slicing use
+
+s= int(input("Enter the four digit num:"))
+n= str(s)
+print(n[::-1])
+
 # rindex
 
-text = "Hello world"
+# text = "Hello world"
 
-print(text.rindex('o'))
+# print(text.rindex('o'))
 
-name = "Mithra Bala"
-print(name.rindex('a'))
+# name = "Mithra Bala"
+# print(name.rindex('a'))
