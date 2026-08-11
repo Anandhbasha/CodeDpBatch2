@@ -1,0 +1,77 @@
+# for variable in list:
+#   code
+
+
+# for(variable condition increment )
+# increment//decrement is not there
+# i value will automatically increase
+# range
+
+# i=0
+# i=1
+# i=2
+# i=3
+# i=4
+# i=5
+# i=6
+# i=7
+# i=8
+# # i=9
+# # range(start,end next value)
+# for i in range(1,10):
+#    print(i)
+
+
+# # range(5) ->(0,1,2,3,4)
+
+# # (0,1,2,3,4)
+# # print(r)
+# r = range(5)
+# while i<len(r):
+#    print(r[i])
+#    i+=1
+# start
+# next to end
+# # order and step to aceess
+# for i in range(10,0,-2):
+#    print(i)
+
+li = [10,20,30,40,50,60]
+l = (10,20,30,40,50,60)
+
+
+# for i in li:
+#     print(i)
+# for i in l:
+#     print("Tuple",i)
+#  i =10 ,20
+
+# for i in s:
+#     print(i)
+
+# s = {10,200,300,400,500,60}
+
+# for i,v in enumerate(s):
+#     print("Key:",i,"value:",v)
+
+
+#    *
+#   ***
+#  *****
+# *******
+
+# no of rows -> input
+# use only one for loop
+
+# reverse
+# 1234
+# 4321
+
+# rindex
+
+text = "Hello world"
+
+print(text.rindex('o'))
+
+name = "Mithra Bala"
+print(name.rindex('a'))

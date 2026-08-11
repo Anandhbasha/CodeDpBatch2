@@ -66,5 +66,6 @@ print(x)
 
 
 square = lambda x: x*x
+# def square()
 
 print(square(4))
