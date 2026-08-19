@@ -37,3 +37,15 @@
     color: purple;
     background-color: plum;
 }
+
+.box{
+    width: 500px;
+    height: 100px;
+    /* background-color: steelblue; */
+    background: linear-gradient(#ff0000c4, #ffeb3b89),url(download.jpg);
+    padding: 50px;
+    color: white;
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+    background-position: center;
+}
