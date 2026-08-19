@@ -1,7 +1,39 @@
-h1{
-    color: grey;
+.text{
+    color: red;
+    /* background-color: black; */
+    /* margin: 100px 20px 0px 50px; */
+    /* first top and bottom or y axis
+    second is x axis  */
+    /* margin-top: 200px;
+    margin-left: 100px; */
+    /* padding: 50px;
+    padding: 50px 150px; */
+    border-radius: 15px 5px;
+    /* border-width: 3px;
+    border-color: black;
+    border-style: dashed; */
+    border: 2px red dashed;
+    font-size: 45px;
+    font-weight: 500;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: italic;
+    /* text-align: center; */
+    text-indent: 12px;
+    text-transform: uppercase;
+    /* text-decoration: line-through; */
+    text-shadow: 2px 2px rebeccapurple;
+    letter-spacing: 20px;
+    
 }
 
-#head1{
-    color: red;
+.para{
+    text-indent: 100px;
+    line-height: 60px;
+    word-spacing: 15px;
+}
+
+.groups{
+    margin-left: 50px;
+    color: purple;
+    background-color: plum;
 }
