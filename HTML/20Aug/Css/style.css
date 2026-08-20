@@ -1,0 +1,49 @@
+.container1{
+    margin-top: 1vh;
+    width: 100vw;
+    height: 8vh;
+    background-color: black;
+    position: fixed;
+    top: 0;
+}
+.container{
+    margin-top: 15vh;
+    width: 100vw;
+    height: 8vh;
+    background-color: aqua;
+    position: sticky;
+    top: 9vh;
+}
+
+/* relative and absolute */
+
+.parent{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    /* position: relative; */
+    transition: 5s ease;
+    float: right;
+    
+}
+
+.child{
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    position: absolute;
+    left: 25px;
+    top: 40px;
+}
+
+.parent:hover{
+    background-color: blue;
+    /* transform: translateX(50px); */
+    /* transform: scale(1.1); */
+    transform: rotate(360deg);
+    transition: 5s ease;
+}
+
+span:hover{
+    font-size: 1.23em;
+}
