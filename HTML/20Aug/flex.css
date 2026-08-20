@@ -1,0 +1,25 @@
+.box{
+    width: 400px;
+    height: 200px;
+    background-color: palegreen;
+}
+.boxes{
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    /* justify-content: flex-end; */
+    row-gap: 15px;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+/* flex grow 
+flex shrink
+flexbasis*/
+.box1{
+    /* flex-shrink: 0; */
+    /* flex-grow: 2; */
+    flex-basis: 800px;
+    
+}
