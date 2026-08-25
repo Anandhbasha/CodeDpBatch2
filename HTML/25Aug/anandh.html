@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Instructor & Full Stack Developer</title>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-main: #0f172a;
+            --bg-card: #1e293b;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent: #38bdf8;
+            --accent-hover: #0284c7;
+            --border: #334155;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-main);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            background-color: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(8px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 8%;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        /* Common Section Setup */
+        section {
+            padding: 5rem 8%;
+        }
+
+        h2.section-title {
+            font-size: 2rem;
+            color: var(--accent);
+            margin-bottom: 2.5rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        h2.section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 50%;
+            height: 3px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+
+        /* Home / Hero Section (Left-Aligned Split) */
+        .hero {
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 3rem;
+        }
+
+        .hero-left {
+            flex: 1.2;
+        }
+
+        .hero-left h1 {
+            font-size: 3rem;
+            line-height: 1.2;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-left h3 {
+            font-size: 1.3rem;
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+        }
+
+        .hero-left p {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+        }
+
+        .hero-right {
+            flex: 0.8;
+            display: flex;
+            justify-content: center;
+        }
+
+        .avatar {
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            border: 4px solid var(--accent);
+            box-shadow: 0 0 25px rgba(56, 189, 248, 0.2);
+            object-fit: cover;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent);
+            color: #0f172a;
+            padding: 0.8rem 1.8rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: var(--accent-hover);
+            color: #fff;
+        }
+
+        /* Experience Timeline Section */
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            position: relative;
+        }
+
+        .exp-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.8rem;
+            transition: transform 0.2s;
+        }
+
+        .exp-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            margin-bottom: 0.5rem;
+        }
+
+        .exp-role {
+            font-size: 1.25rem;
+            color: var(--accent);
+        }
+
+        .exp-meta {
+            color: var(--text-secondary);
+            font-size: 0.88rem;
+        }
+
+        .exp-card ul {
+            margin-left: 1.2rem;
+            margin-top: 1rem;
+            color: var(--text-secondary);
+        }
+
+        .exp-card li {
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .skills-tag-group {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .skill-tag {
+            background-color: #334155;
+            color: var(--accent);
+            font-size: 0.8rem;
+            padding: 0.25rem 0.6rem;
+            border-radius: 4px;
+        }
+
+        /* Skill Cards Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .skill-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .skill-card i {
+            font-size: 2.2rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .skill-card h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .skill-card p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Auto Skills Slider */
+        .slider-container {
+            overflow: hidden;
+            background-color: var(--bg-card);
+            padding: 1.5rem 0;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            white-space: nowrap;
+            position: relative;
+        }
+
+        .slider-track {
+            display: inline-block;
+            animation: 20s slide infinite linear;
+        }
+
+        .slide-item {
+            display: inline-block;
+            padding: 0 2rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        @keyframes slide {
+            from { transform: translateX(0); }
+            to { transform: translateX(-50%); }
+        }
+
+        /* Contact Section */
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 0.9rem;
+            background-color: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            color: var(--text-primary);
+            font-size: 0.95rem;
+        }
+
+        input:focus, textarea:focus {
+            outline: 1px solid var(--accent);
+        }
+
+        .contact-info p {
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .contact-info i {
+            color: var(--accent);
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 850px) {
+            .hero {
+                flex-direction: column-reverse;
+                text-align: center;
+                min-height: auto;
+                padding-top: 3rem;
+            }
+
+            .hero-left p {
+                margin: 0 auto 2rem auto;
+            }
+
+            .nav-links {
+                gap: 1rem;
+            }
+
+            section {
+                padding: 3.5rem 5%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <nav>
+        <div class="logo">Freelance Instructor & Dev</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home / Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-left">
+            <h1>Hi, I'm a Freelance Technical Instructor & Web Developer</h1>
+            <h3>Specializing in Full Stack, DSA, & Lead Generation</h3>
+            <p>I build dynamic, user-friendly web platforms while empowering professionals and students through hands-on technical training. With expertise spanning software development, instruction, and business growth strategies, I deliver measurable results across both academic and business domains.</p>
+            <a href="#contact" class="btn">Get In Touch</a>
+        </div>
+        <div class="hero-right">
+            <!-- AI Generated Avatar Image -->
+            <img src="https://api.dicebear.com/7.x/bottts/svg?seed=InstructorDev" alt="AI Avatar" class="avatar">
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about">
+        <h2 class="section-title">About Me & Experience</h2>
+        <div class="timeline">
+
+            <!-- Card 1 -->
+            <div class="exp-card">
+                <div class="exp-header">
+                    <div>
+                        <h3 class="exp-role">Instructor</h3>
+                        <strong>Qtree Technologies · Part-time</strong>
+                    </div>
+                    <span class="exp-meta">Nov 2024 - Present · 1 yr 10 mos | On-site</span>
+                </div>
+                <ul>
+                    <li>Delivered training on Data Structures & Algorithms (DSA) using Python and Java, covering arrays, linked lists, stacks, queues, recursion, sorting, searching, trees, and basic graphs.</li>
+                    <li>Provided strong foundations in Core Python and Core Java, focusing on problem-solving and programming fundamentals.</li>
+                    <li>Conducted hands-on coding sessions, debugging practices, and placement-oriented problem solving.</li>
+                    <li>Delivered training in Full Stack Development, including MERN Stack and Python Full Stack (Django), guiding students in real-time project development.</li>
+                    <li>Introduced learners to UX/UI Design principles, enabling them to build user-friendly and responsive applications.</li>
+                    <li>Mentored students in interview preparation, coding best practices, and industry-ready development skills.</li>
+                </ul>
+                <div class="skills-tag-group">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Java</span>
+                    <span class="skill-tag">DSA</span>
+                    <span class="skill-tag">MERN Stack</span>
+                    <span class="skill-tag">Django</span>
+                    <span class="skill-tag">SQL</span>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="exp-card">
+                <div class="exp-header">
+                    <div>
+                        <h3 class="exp-role">Freelance Trainer & Educator</h3>
+                        <strong>Freelance</strong>
+                    </div>
+                    <span class="exp-meta">Mar 2024 - Present · 2 yrs 6 mos | Tamil Nadu, India · On-site</span>
+                </div>
+                <p style="color: var(--text-secondary); margin-top: 0.5rem;">Experienced Technical Trainer and Full Stack Developer with a strong background in delivering industry-oriented training programs across reputed institutions and organizations.</p>
+                <ul>
+                    <li>Delivered Data Structures in Python sessions to 1st-year students at United Institute of Technology.</li>
+                    <li>Conducted corporate training at Rythmos Company, equipping new employees with programming fundamentals.</li>
+                    <li>Delivered a One Credit Course at Kongu Engineering College for 3rd-year students.</li>
+                    <li>Delivered a MERN Stack One-Week Training Program at Bargur Government College.</li>
+                    <li>Served as a trainer in MERN, Python Full Stack, and PHP Full Stack Development across multiple educational institutions.</li>
+                </ul>
+                <div class="skills-tag-group">
+                    <span class="skill-tag">SQL</span>
+                    <span class="skill-tag">Prototyping</span>
+                    <span class="skill-tag">MERN</span>
+                    <span class="skill-tag">PHP</span>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="exp-card">
+                <div class="exp-header">
+                    <div>
+                        <h3 class="exp-role">Corporate Trainer</h3>
+                        <strong>Phoenix Tech IT Solutions Inc. · Freelance</strong>
+                    </div>
+                    <span class="exp-meta">Aug 2023 - Present · 3 yrs 1 mo</span>
+                </div>
+                <ul>
+                    <li>Delivered training in Python Programming (Beginner to Intermediate Level).</li>
+                    <li>Covered key topics including variables, control structures, functions, lists, tuples, dictionaries, and file handling.</li>
+                    <li>Introduced Full Stack Development concepts, integrating Python with frontend technologies.</li>
+                    <li>Conducted workshops on Python, basic OOP concepts, React, backend development, and database concepts.</li>
+                </ul>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="exp-card">
+                <div class="exp-header">
+                    <div>
+                        <h3 class="exp-role">Owner</h3>
+                        <strong>Anandh Foods · Full-time</strong>
+                    </div>
+                    <span class="exp-meta">Apr 2018 - Present · 8 yrs 5 mos | Sankari, Tamil Nadu, India</span>
+                </div>
+                <ul>
+                    <li><strong>Business Management:</strong> Oversee day-to-day operations, inventory management, procurement, and quality control.</li>
+                    <li><strong>Team Leadership & Relations:</strong> Manage and lead a team of staff while fostering strong relationships with customers.</li>
+                    <li><strong>Financial Oversight & Strategy:</strong> Manage business financial health, budgeting, forecasting, and marketing strategies to drive growth.</li>
+                </ul>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="exp-card">
+                <div class="exp-header">
+                    <div>
+                        <h3 class="exp-role">Web Developer & UX/UI Designer</h3>
+                        <strong>Geniies IT and Services Private Limited · Full-time</strong>
+                    </div>
+                    <span class="exp-meta">Nov 2023 - May 2024 · 7 mos | Coimbatore, Tamil Nadu, India</span>
+                </div>
+                <ul>
+                    <li>Applied strong understanding of UX/UI design principles, usability, accessibility, and responsive design.</li>
+                    <li>Utilized Figma, Adobe XD, and Sketch for wireframing and prototyping.</li>
+                    <li>Integrated RESTful APIs and AJAX for dynamic web content delivery.</li>
+                </ul>
+                <div class="skills-tag-group">
+                    <span class="skill-tag">Prototyping</span>
+                    <span class="skill-tag">PHP</span>
+                    <span class="skill-tag">REST APIs</span>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="exp-card">
+                <div class="exp-header">
+                    <div>
+                        <h3 class="exp-role">Full-stack Developer & UX/UI Designer</h3>
+                        <strong>Tardiverse · Full-time</strong>
+                    </div>
+                    <span class="exp-meta">Sep 2022 - Oct 2023 · 1 yr 2 mos | Chennai, Tamil Nadu, India</span>
+                </div>
+                <ul>
+                    <li>Built responsive web applications using HTML, CSS, Bootstrap, JavaScript, jQuery, and PHP.</li>
+                    <li>Designed interfaces using Figma & Photoshop; conducted usability testing and optimized code quality.</li>
+                    <li>Utilized Git for version control and collaborating in team settings.</li>
+                </ul>
+            </div>
+
+            <!-- Card 7 -->
+            <div class="exp-card">
+                <div class="exp-header">
+                    <div>
+                        <h3 class="exp-role">Web Developer</h3>
+                        <strong>Aura Technologies · Part-time</strong>
+                    </div>
+                    <span class="exp-meta">Dec 2021 - Jun 2022 · 7 mos | Coimbatore, Tamil Nadu, India</span>
+                </div>
+                <ul>
+                    <li>Supported frontend UI building alongside backend APIs using PHP, Node.js, and database operations.</li>
+                </ul>
+            </div>
+
+            <!-- Card 8 -->
+            <div class="exp-card">
+                <div class="exp-header">
+                    <div>
+                        <h3 class="exp-role">Lead Generation Specialist</h3>
+                        <strong>Thoughtbees & Technologyspices</strong>
+                    </div>
+                    <span class="exp-meta">Feb 2016 - Apr 2018 | Coimbatore, India</span>
+                </div>
+                <ul>
+                    <li>Executed lead generation campaigns using email, social media outreach, and market research.</li>
+                    <li>Managed CRM systems, qualified leads, and worked alongside sales teams to maximize conversions.</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2 class="section-title">Skills & Expertise</h2>
+        
+        <!-- Skill Cards Grid -->
+        <div class="skills-grid">
+            <div class="skill-card">
+                <i class="fa-solid fa-code"></i>
+                <h3>Full Stack Development</h3>
+                <p>HTML, CSS, Bootstrap, JavaScript, jQuery, React, Node.js, PHP, MERN Stack, Django.</p>
+            </div>
+            <div class="skill-card">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <h3>Technical Training</h3>
+                <p>Data Structures & Algorithms, Python, Java, Mentoring, Placement Preparation.</p>
+            </div>
+            <div class="skill-card">
+                <i class="fa-solid fa-pen-nib"></i>
+                <h3>UX/UI Design</h3>
+                <p>Wireframing, Prototyping, Usability Testing, Figma, Adobe XD, Photoshop.</p>
+            </div>
+            <div class="skill-card">
+                <i class="fa-solid fa-chart-line"></i>
+                <h3>Lead Generation & Mgmt</h3>
+                <p>Market Research, CRM Management, Campaign Execution, Business Operations.</p>
+            </div>
+        </div>
+
+        <!-- Infinite Skill Slider -->
+        <div class="slider-container">
+            <div class="slider-track">
+                <!-- Track duplicated twice for smooth infinite loop -->
+                <span class="slide-item">Python</span>
+                <span class="slide-item">Java</span>
+                <span class="slide-item">Data Structures</span>
+                <span class="slide-item">MERN Stack</span>
+                <span class="slide-item">React</span>
+                <span class="slide-item">PHP</span>
+                <span class="slide-item">JavaScript</span>
+                <span class="slide-item">Figma</span>
+                <span class="slide-item">SQL</span>
+                <span class="slide-item">Lead Generation</span>
+                <span class="slide-item">Market Research</span>
+                
+                <!-- Duplicate -->
+                <span class="slide-item">Python</span>
+                <span class="slide-item">Java</span>
+                <span class="slide-item">Data Structures</span>
+                <span class="slide-item">MERN Stack</span>
+                <span class="slide-item">React</span>
+                <span class="slide-item">PHP</span>
+                <span class="slide-item">JavaScript</span>
+                <span class="slide-item">Figma</span>
+                <span class="slide-item">SQL</span>
+                <span class="slide-item">Lead Generation</span>
+                <span class="slide-item">Market Research</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Let's Work Together</h3>
+                <p style="margin-top: 1rem;">Open for corporate training opportunities, freelance instruction, web development projects, and technical consulting.</p>
+                <div style="margin-top: 2rem;">
+                    <p><i class="fa-solid fa-location-dot"></i> Tamil Nadu, India</p>
+                    <p><i class="fa-solid fa-envelope"></i> your.email@example.com</p>
+                    <p><i class="fa-solid fa-globe"></i> Available for On-site & Remote</p>
+                </div>
+            </div>
+
+            <form id="portfolio-contact">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <input type="text" placeholder="Subject">
+                <textarea rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        // Simple form interaction
+        document.getElementById('portfolio-contact').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! I will get back to you soon.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
