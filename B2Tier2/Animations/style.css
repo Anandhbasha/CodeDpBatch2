@@ -1,0 +1,125 @@
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: violet;
+    /* animation: move 3s linear infinite alternate;
+    animation-delay: 2s; */
+    /* animation: colorChnage 3s ease infinite; */
+    animation: rotate 2s infinite;
+}
+
+/* @keyframes move {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(200px);
+    }
+} */
+/* 
+@keyframes move {
+    0%{
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(300px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+} */
+
+/* @keyframes colorChnage {
+    0%{
+        background-color: black;
+    }
+    25%{
+        background-color: pink;
+    }
+    50%{
+        background-color: green;
+    }
+    100%{
+        background-color: blue;
+    }
+} */
+
+/* @keyframes rotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+} */
+.navContainer{
+    display: flex;
+    width: 100%;
+    height: 8vh;
+    background-color: palegreen;
+    align-items: center;
+
+}
+.navLinks{
+    width: 100%;
+    display: flex;    
+    justify-content: space-around;
+    align-items: center;
+}
+.navLinks > li{
+    list-style-type: none;
+    position: relative;
+}
+
+.navLinks >li>a{
+    text-decoration: none;
+    color: navy;
+    font-size: 1.45em;
+    font-weight: bold;
+}
+
+.navLinks >li::after{
+    content: "";
+    height: 5px;
+    background-color: rgb(10, 67, 255);
+    width: 0;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    border-radius: 10px;
+}
+.navLinks >li:hover::after{
+    width: 100%;
+    transition: 3s ease;
+}
+.hamBurger{
+    display: none;
+    width: 50px;
+    height: 50px;
+    /* background-color: navy; */
+    padding: 5px;
+    text-align: center;
+
+
+}
+.line{
+    width: 90%;
+    height: 8px;
+    border-radius: 15px;
+    background-color: white;
+}
+@media (max-width:400px){
+    .navLinks{
+        display: none;
+    }
+    .hamBurger{
+        display: flex;
+        flex-direction: column;
+        /* gap: 10px; */
+        align-items: center;
+        justify-content: space-around;
+    }
+    .navContainer{
+        justify-content: flex-end;
+    }
+}
