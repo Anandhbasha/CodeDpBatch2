@@ -1,0 +1,140 @@
+:root{
+    --primary-color:#2E7D32;
+    --primary-dark:#1B5E20;
+    --secondary-color:#81C784;
+    --background-color:#FFF8E7;
+    --text:#263238;
+    --grey:#777;
+    --accent:#F9A825;
+    --white:#FFFFFF;
+    --border:#bbb;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color:var(--background-color);
+    color:var(--text);
+}
+.loginContainer{
+    display:flex;
+    min-height:100vh;
+}
+
+.leftImage{
+    width:50%;
+    position:relative;
+    overflow:hidden;
+}
+.leftImage img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+.leftImage::after{
+    content:'';
+    position:absolute;
+    inset:0;
+    background-color:rgba(27,94,31,0.35);
+}
+.storeContent{
+    position:absolute;
+    z-index: 2000;
+    bottom:80px;
+    left:250px;
+    color:var(--white);
+}
+.storeContent h1{
+    font-size:3em;
+    margin-bottom:10px;
+}
+.storeContent p{
+    font-size:1.2em;
+}
+.rightSection{
+    width:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background-color:var(--white);
+}
+.loginForm{
+    width:400px;
+}
+.loginForm h1{
+    font-size:2.5em;
+    margin-bottom:20px;
+    color:var(--text)
+}
+.loginForm p{
+    font-size:1.2em;
+    margin-bottom:20px;
+    color:var(--grey);
+}
+.inputBox{
+    position:relative;
+    margin-bottom:20px;
+}
+.inputBox input{
+    width:100%;
+    padding:10px 10px 10px 40px;
+    font-size: 1em;
+    border-bottom:2px solid var(--border);
+    border-radius:5px;
+    outline:none;
+    background:transparent;
+}
+.inputBox label{
+    position:absolute;
+    top:-8px;
+    left:20px;
+    color:var(--grey);
+    font-size:1em;
+    pointer-events:none;
+    transition:0.3s;
+    background-color:var(--white);
+}
+
+.inputBox input:focus ~label,
+.inputBox input:valid ~label{
+    top:-20px;
+    font-size:0.8em;
+    color:var(--primary-color);
+}
+.inputBox input:focus{
+    border-bottom:2px solid var(--primary-color);
+}
+.option{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9em;
+    margin-bottom: 20px;
+}
+.option label{
+    color:var(--grey);
+}
+.option a,.signupLink a{
+    color:var(--primary-color);
+    text-decoration:none;
+    font-weight:600;
+}
+.loginButton{
+    width:100%;
+    padding:15px;
+    font-size:1em;
+    font-weight:bold;
+    background-color:var(--primary-color);
+    color:var(--white);
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    margin-bottom: 10px;
+}
+.loginButton:hover{
+    background-color:var(--primary-dark);
+}
