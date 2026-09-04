@@ -3,39 +3,191 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    <link rel="stylesheet" href="Home.css">
 <body>
-    <div class = "loginContainer">
-        <div class="leftImage">
-            <img src="https://img.magnific.com/free-photo/healthy-food-organic-fresh-farmer-products_53876-64953.jpg?semt=ais_hybrid&w=740&q=80" alt="Organic Store">
-            <div class="storeContent">
-                <h1>Organic Store</h1>
-                <p>Fresh.Natural.Healty.</p>
-            </div>
-        </div>
-        <div class = "rightSection">
-            <div class="loginForm">
-                <h1>Welcome Back</h1>
-                <p>Login to Your Account</p>
-                <div class="inputBox">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" placeholder="Enter your email">
+    <header class="navContainer">
+        <nav class="navbar">
+            <div class="logo">
+                <div class="logoImage">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQurprC0LlYzsDrVwK25XNfaG2bIWpHzOnsf01XgsBnCw&s=10"alt="Organic Store Logo">
                 </div>
-                <div class="inputBox">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" placeholder="Enter your password">
+                <h1>Organ Store</h1>
             </div>
-            <div class="option">
-                <label for="remember">
-                    <input type="checkbox" id="remember"> Remember Me
-                </label>
-                <a href="#">Forgot Password?</a>
+            <ul class="navLinks">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Categories</a></li>
+            </ul>
+            <div class="navIcons">
+                <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <a href="#"><i class="fa-solid fa-basket-shopping"></i></a>
+                <a href="login.html"><i class="fa-solid fa-user"></i></a>
             </div>
-            <button class="loginButton">Login</button>
-            <p class="signupLink">Don't have an account? <a href="#">Sign Up
+
+        </nav>
+    </header>
+    <section class="hero">
+        <div class="heroContent">
+            <p class="smallTitle">100% Fresh & Oraganic</p>
+            <h1>Fresh Food For <span>Healty Life</span></h1>
+            <p>Discover fresh,natural and organic products
+                deliverd directly to your doorstep.</p>
+            <div class="heroButtons">
+                <a href="#" class="btn">Shop Now</a>
+                <a href="#" class="btn">Learn More</a>
+            </div>
         </div>
-    </div>
+        <div class="heroImage">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIXaXEvAxV14e7fNkIcgxK5qVKmF3pw3hjI1YKwPxvZw&s=10" alt="Organic Fresh vegetables">
+        </div>
+    </section>
+    <section class="categories">
+        <div class="catTitle">
+            <p>Explore</p>
+            <h2>Shop by Category</h2>
+        </div>
+        <div class = "catContainer">
+            <div class="catCard">
+                <div class="catIcon">
+                    <i class="fa-solid fa-carrot"></i>
+                    <h3>Vegetables</h3>
+                    <p>Fresh Vegetables</p>
+                </div>
+            </div>
+            <div class="catCard">
+                <div class="catIcon">
+                    <i class="fa-solid fa-apple-whole"></i>
+                    <h3>Fruits</h3>
+                    <p>Fresh Fruits</p>
+                </div>
+            </div>
+            <div class="catCard">
+                <div class="catIcon">
+                    <i class="fa-solid fa-cow"></i>
+                    <h3>Dairy</h3>
+                    <p>Fresh Dairy</p>
+                </div>
+            </div>
+            <div class="catCard">
+                <div class="catIcon">
+                    <i class="fa-solid fa-wheat-awn-circle-exclamation"></i>
+                    <h3>Grains</h3>
+                    <p>Healty Graines</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="products">
+        <div class = "prodTitle">
+            <p>Our Products</p>
+            <h2>Popular Products</h2>
+        </div>
+        <div class="prodContainer">
+            <div class="prodCard">
+                <div class="prodImage">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQurprC0LlYzsDrVwK25XNfaG2bIWpHzOnsf01XgsBnCw&s=10" alt="Fresh Vegetables">
+                </div>
+                <div class = "prodDetails">
+                    <p class="prodCategory">Vegetables</p>
+                    <h3>Organic Tomooto</h3>
+                    <div class="rating">
+                        <i class="fa-regular fa-star" style="color: gold;"></i>
+                        <i class="fa-regular fa-star" style="color: gold;"></i>
+                        <i class="fa-regular fa-star" style="color: gold;"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <div class = "prodBtm">
+                        <span class="price">60/kg</span>
+                        <button class="addToCart"><i class="fa-solid fa-basket-shopping"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="prodCard">
+                <div class="prodImage">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQurprC0LlYzsDrVwK25XNfaG2bIWpHzOnsf01XgsBnCw&s=10" alt="Fresh Vegetables">
+                </div>
+                <div class = "prodDetails">
+                    <p class="prodCategory">Fruits</p>
+                    <h3>Fresh Apple</h3>
+                    <div class="rating">
+                        <i class="fa-regular fa-star" style="color: gold;"></i>
+                        <i class="fa-regular fa-star" style="color: gold;"></i>
+                        <i class="fa-regular fa-star" style="color: gold;"></i>
+                        <i class="fa-regular fa-star" style="color: gold;"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <div class = "prodBtm">
+                        <span class="price">250/kg</span>
+                        <button class="addToCart"><i class="fa-solid fa-basket-shopping"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="prodCard">
+                <div class="prodImage">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQurprC0LlYzsDrVwK25XNfaG2bIWpHzOnsf01XgsBnCw&s=10" alt="Fresh Vegetables">
+                </div>
+                <div class = "prodDetails">
+                    <p class="prodCategory">Dairy</p>
+                    <h3>Oraganic Milk</h3>
+                    <div class="rating">
+                        <i class="fa-regular fa-star" style="color: gold;"></i>
+                        <i class="fa-regular fa-star" style="color: gold;"></i>
+                        <i class="fa-regular fa-star" style="color: gold;"></i>
+                        <i class="fa-regular fa-star" style="color: gold;"></i>
+                        <i class="fa-regular fa-star" style="color: gold;"></i>
+                    </div>
+                    <div class = "prodBtm">
+                        <span class="price">50/lit</span>
+                        <button class="addToCart"><i class="fa-solid fa-basket-shopping"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="prodCard">
+                <div class="prodImage">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQurprC0LlYzsDrVwK25XNfaG2bIWpHzOnsf01XgsBnCw&s=10" alt="Fresh Vegetables">
+                </div>
+                <div class = "prodDetails">
+                    <p class="prodCategory">Grains</p>
+                    <h3>Oraganic Rice</h3>
+                    <div class="rating">
+                        <i class="fa-regular fa-star" style="color: gold;"></i>
+                        <i class="fa-regular fa-star" style="color: gold;"></i>
+                        <i class="fa-regular fa-star" style="color: gold;"></i>
+                        <i class="fa-regular fa-star" style="color: gold;"></i>
+                        <i class="fa-regular fa-star" style="color: gold;"></i>
+                    </div>
+                    <div class = "prodBtm">
+                        <span class="price">110/kg</span>
+                        <button class="addToCart"><i class="fa-solid fa-basket-shopping"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class = "offer">
+        <div class="offerContent">
+            <p>Special Offer</p>
+            <h2>Get 20% OFF on Fresh Vegetables</h2>
+            <p>Freshness Deliverded straight to your home.</p>
+            <a href="#" class="btn">Shop Now</a>
+        </div>
+    </section>
+    <section class = "features">
+        <div class="sectionTitle">
+            <p>Why Us</p>
+            <h2>Why Choose Organic Store?</h2>
+        </div>
+        <div class="featuresContainer">
+            <div class="featureCard">
+                <i class="fa-solid fa-truck"></i>
+                <h3>Fast Delivery</h3>
+                <p>Get your products delivered in no time.</p>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
