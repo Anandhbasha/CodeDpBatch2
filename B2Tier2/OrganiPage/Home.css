@@ -197,4 +197,94 @@ li{
     box-shadow: 0 8px 25px rgba(0,0,0,0.08);
     border-color: var(--secondary-color);
 }
-.
+.prodContainer{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+.prodCard{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 350px;
+    height: 550px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    gap: 35px;
+    padding: 25px;
+    border-radius: 15px;
+
+}
+.prodDetails{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.price{
+    display: block;
+    text-align: left;
+}
+
+
+.addToCart{
+    padding: 15px 30px;
+    border-radius: 25px;
+    margin-top: 10px;
+    display: flex;
+    font-size: 1.23em;
+    border: none;
+    font-weight: bold;
+    background-color: var(--primary-color);
+    color: var(--white);
+    gap: 8px;
+}
+
+.addToCart:hover{
+    background-color: var(--white);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.products{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.prodTitle{
+    margin-top: 15px;
+}
+.prodTitle{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-bottom: 35px;
+}
+.offer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 45px;
+}
+.offerContent{
+    font-size: 1.32em;
+    text-align: center;
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+}
+
+.features{
+    width: 100vw;
+    display: flex;
+    background-color: var(--primary-color);
+    color: var(--white);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-top: 50px;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sectionTitle >p {
+    padding: 25px;
+}
