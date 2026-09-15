@@ -227,62 +227,135 @@
 // console.log(arr);
 // // unshift
 // arr.unshift(10)
-// console.log(arr);
+// // console.log(arr);
 
-// // slice
-// console.log(arr.slice(1,3));
-// // splice
-// // replace or remove
-// arr.splice(0,2,22)
-// // [22,10, 2, 3, 4,5, 6, 7]
-// console.log(arr);
+// // // slice
+// // console.log(arr.slice(1,3));
+// // // splice
+// // // replace or remove
+// // arr.splice(0,2,22)
+// // // [22,10, 2, 3, 4,5, 6, 7]
+// // console.log(arr);
 
-// sort
-let newarr = [4,2,1,3,7,5,6,20,70,80]
-// console.log(newarr.sort());
-let assending = newarr.sort((a,b)=>a-b)
-console.log(assending);
-let fruits = ["apple","orange","kiwi","banana","Apple"]
-// a,b,k,o
-console.log(fruits.sort());
+// // sort
+// let newarr = [4,2,1,3,7,5,6,20,70,80]
+// // console.log(newarr.sort());
+// let assending = newarr.sort((a,b)=>a-b)
+// console.log(assending);
+// let fruits = ["apple","orange","kiwi","banana","Apple"]
+// // a,b,k,o
+// console.log(fruits.sort());
 
-// set
-let sets = new Set()
+// // set
+// let sets = new Set()
 
-sets.add(10)
-sets.add(20)
-sets.add(30)
-sets.add(40)
-sets.add(40)
-console.log(sets);
-
-
-// find
-let res = newarr.find((x)=>x==21)
-console.log(res);
-
-// includes
-console.log(newarr.includes(21));
-
-// indexof
-console.log(newarr.indexOf(71));
-
-// startswith
-let userName = "Ramani"
-console.log(userName.startsWith("A"));
-
-// endswith
-console.log(userName.endsWith("i"));
-
-// tolowercase
-console.log(userName.toLowerCase().startsWith("r"));
+// sets.add(10)
+// sets.add(20)
+// sets.add(30)
+// sets.add(40)
+// sets.add(40)
+// console.log(sets);
 
 
-// split
-let text = "i love to code js"
-newval = text.split(" ")
-console.log(newval);
-console.log(newval.join("/"));
+// // find
+// let res = newarr.find((x)=>x==21)
+// console.log(res);
+
+// // includes
+// console.log(newarr.includes(21));
+
+// // indexof
+// console.log(newarr.indexOf(71));
+
+// // startswith
+// let userName = "Ramani"
+// console.log(userName.startsWith("A"));
+
+// // endswith
+// console.log(userName.endsWith("i"));
+
+// // tolowercase
+// console.log(userName.toLowerCase().startsWith("r"));
 
 
-// join
+// // split
+// let text = "i love to code js"
+// newval = text.split(" ")
+// console.log(newval);
+// // join
+// console.log(newval.join("/"));
+
+// setTimeout
+// setTimeout(()=>{
+
+// },timeDelay)
+// setTimeout(()=>{
+//     console.log("Welcome to setTimeout");    
+// },5000)
+// setInterval
+// setInterval(()=>{
+//     console.log("Welcome to setInterval");    
+// },2000)
+// spread operator
+let arr = [10,20,30,40]
+let arr1 = [20,40,60,80]
+let arr2 = [...arr,...arr1]
+// console.log(arr2);
+
+// rest operator
+let[first,second,...participation] = arr2
+console.log(first);
+console.log(second);
+console.log(participation);
+
+
+// Object destructure
+const person = {
+    personName :"Aravind",
+    personAge:30,
+    personCity:"CBE"
+}
+const {personName,personCity} =person
+console.log(personName);
+console.log(personCity);
+
+
+// Object methods
+const product = {
+    "id": 1,
+    "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+    "price": 109.95,
+    "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+    "category": "men's clothing",
+    "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png",
+    "rating": {
+      "rate": 3.9,
+      "count": 120
+    }
+}
+
+// const key = Object.entries(product)
+// console.log(key);
+// key.map((item)=>console.log(item))
+
+// // template literals
+// let a = 20;
+// let b =5
+// // console.log("The a value is:"+a);
+// // console.log("The a value is:",a,"and the B value is:",b);
+// console.log(`The a value is:${a} and the B value is: ${b}`);
+
+console.log(Object.hasOwn(person,"personName"));
+
+const student = {
+    studentName:"Bala"
+}
+const details = {
+    age:22,
+    city:"Erode",
+    dept:"ECE",
+    year:"2ndYear"
+}
+
+Object.assign(student,details)
+console.log(student);
