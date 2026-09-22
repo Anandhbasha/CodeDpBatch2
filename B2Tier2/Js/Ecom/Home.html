@@ -5,24 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AllProducts</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
 </head>
 <body>
     <div class="homeContainer">
-        <nav class="sidebar">
+        <nav class="sidebar" id="sidebar">
             <div class="hamburger" onclick="closeMenu()">
                 <div class="line" id="line1"></div>
                 <div class="line" id="line2"></div>
                 <div class="line" id="line3"></div>
             </div>
-            <div class="navLinks">
+            <div class="navIcons" id="navIcons">
+                <a href="#"><i class="fa-brands fa-product-hunt"></i></a>
+                <a href="#"><i class="fa-solid fa-person"></i></a>
+                <a href="#"><i class="fa-solid fa-gem"></i></a>
+                <a href="#"><i class="fa-solid fa-display"></i></a>
+                <a href="#"><i class="fa-solid fa-venus"></i></a>
+                <a href=""><i class="fa-solid fa-user"></i></a>
+            </div>
+            <div class="navLinks" id="navLinks">
                 <a href="#">AllProducts</a>
                 <a href="#">Mens</a>
                 <a href="#">Womens</a>
                 <a href="#">Jewellery</a>
                 <a href="#">Electronics</a>
+                <button class="btnLogin">Logout</button>
             </div>
         </nav>
-        <section class="contentPage"></section>
+        <section class="contentPage" id="contentPage"></section>
     </div>
     <script src="index.js"></script>
 </body>
