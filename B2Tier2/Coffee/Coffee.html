@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee shop-Premium Atrisanal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    <link rel=""preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="coffee.css">
+</head>
+<body>
+
+    <header class="header">
+        <nav class="navBar">
+            <a href="#home" class="logo">
+                <i class="fa-solid fa-mug-hot"></i> 
+                <h2>Coffee</h2>
+            </a>
+            <div class="navLinks" id="navLinks">
+                <a href="#home" class="nav-item">Home</a>
+                <a href="#about" class="nav-item">About</a>
+                <a href="#menu" class="nav-item">Menus</a>
+                <a href="#areas" class="nav-item">Our Areas</a>
+                <a href="#contact" class="nav-item">Contact</a>
+            </div>
+            <div class="hamburger" id="hamburgerBtn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <section class="homePage" id="home">
+        <div class="leftPage">
+            <h1>Best Coffee</h1>
+            <h2>Make your day great with our <br> Special Coffee</h2>
+            <p>Coffee is a popular global beverage brewed from the roasted and ground seeds of the tropical evergreen coffee plant. Experience handcrafted perfection in every single sip.</p>
+            <div class="btmButton">
+                <button class="btn-primary" onclick="scrollToSection('menu')">Order Now</button>
+                <button class="btn-secondary" onclick="scrollToSection('contact')">Contact Us</button>
+            </div>
+        </div>
+        <div class="rightPage">
+            <div class="hero-img-container">
+                <div class="hero-img-bg"></div>
+                <!-- Custom Inline Coffee Vector illustration -->
+                <svg class="hero-svg" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M120 220C120 180 150 160 250 160C350 160 380 180 380 220V320C380 380 330 410 250 410C170 410 120 380 120 320V220Z" fill="#D4A373"/>
+                    <path d="M130 220C130 190 160 175 250 175C340 175 370 190 370 220V310C370 365 325 395 250 395C175 395 130 365 130 310V220Z" fill="#6F1E1B"/>
+                    <ellipse cx="250" cy="220" rx="120" ry="30" fill="#4A1210"/>
+                    <ellipse cx="250" cy="220" rx="100" ry="22" fill="#2E0A09"/>
+                    <!-- Cup Handle -->
+                    <path d="M370 230C420 230 430 290 370 320" stroke="#D4A373" stroke-width="24" stroke-linecap="round"/>
+                    <!-- Steam Lines -->
+                    <path d="M200 130C210 110 190 90 200 70" stroke="#D4A373" stroke-width="6" stroke-linecap="round" opacity="0.7"/>
+                    <path d="M250 120C260 100 240 80 250 60" stroke="#D4A373" stroke-width="6" stroke-linecap="round" opacity="0.8"/>
+                    <path d="M300 130C310 110 290 90 300 70" stroke="#D4A373" stroke-width="6" stroke-linecap="round" opacity="0.7"/>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <section class="aboutSection" id="about">
+        <div class="aboutContainer">
+            <div class="aboutImg">
+                <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=800&q=80" alt="Fresh Coffee Beans" onerror="this.src='https://placehold.co/600x400/4A1210/D4A373?text=Artisanal+Coffee'">
+            </div>
+            <div class="aboutContent">
+                <div class="section-title" style="text-align: left; margin-bottom: 1.5rem;">
+                    <h3>About Our Cafe</h3>
+                    <h2>Freshly Roasted Quality Coffee</h2>
+                </div>
+                <p>Founded with a passion for excellence, we source 100% organic Arabica coffee beans directly from sustainable farms worldwide. Every cup is brewed by certified master baristas dedicated to perfection.</p>
+                
+                <div class="aboutFeatures">
+                    <div class="featureBox">
+                        <i class="fa-solid fa-seedling"></i>
+                        <div>
+                            <h4>100% Organic</h4>
+                            <p style="font-size: 0.8rem; margin: 0;">Sourced sustainably</p>
+                        </div>
+                    </div>
+                    <div class="featureBox">
+                        <i class="fa-solid fa-award"></i>
+                        <div>
+                            <h4>Master Baristas</h4>
+                            <p style="font-size: 0.8rem; margin: 0;">Expertly crafted</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="menuSection" id="menu">
+        <div class="section-title">
+            <h3>Our Selection</h3>
+            <h2>Discover Special Menus</h2>
+        </div>
+
+        <div class="menuTabs">
+            <button class="tabBtn active" onclick="filterMenu('all', this)">All Drinks</button>
+            <button class="tabBtn" onclick="filterMenu('hot', this)">Hot Coffee</button>
+            <button class="tabBtn" onclick="filterMenu('cold', this)">Cold Brews</button>
+            <button class="tabBtn" onclick="filterMenu('dessert', this)">Desserts</button>
+        </div>
+
+        <div class="menuGrid" id="menuGrid">
+            <!-- Espresso -->
+            <div class="menuCard" data-category="hot">
+                <div>
+                    <i class="fa-solid fa-mug-hot cardIcon"></i>
+                    <h3>Classic Espresso</h3>
+                    <p>Rich and bold single shot espresso brewed from dark roasted beans.</p>
+                </div>
+                <div class="cardFooter">
+                    <span class="price">$3.50</span>
+                    <button class="addCartBtn" onclick="addToCart('Classic Espresso')"><i class="fa-solid fa-plus"></i></button>
+                </div>
+            </div>
+
+            <!-- Cappuccino -->
+            <div class="menuCard" data-category="hot">
+                <div>
+                    <i class="fa-solid fa-mug-saucer cardIcon"></i>
+                    <h3>Creamy Cappuccino</h3>
+                    <p>Equal parts espresso, steamed milk, and thick velvety foam on top.</p>
+                </div>
+                <div class="cardFooter">
+                    <span class="price">$4.80</span>
+                    <button class="addCartBtn" onclick="addToCart('Creamy Cappuccino')"><i class="fa-solid fa-plus"></i></button>
+                </div>
+            </div>
+
+            <!-- Iced Latte -->
+            <div class="menuCard" data-category="cold">
+                <div>
+                    <i class="fa-solid fa-glass-water cardIcon"></i>
+                    <h3>Iced Caramel Latte</h3>
+                    <p>Espresso mixed with cold milk, ice cubes, and rich buttery caramel drizzle.</p>
+                </div>
+                <div class="cardFooter">
+                    <span class="price">$5.20</span>
+                    <button class="addCartBtn" onclick="addToCart('Iced Caramel Latte')"><i class="fa-solid fa-plus"></i></button>
+                </div>
+            </div>
+
+            <!-- Nitro Cold Brew -->
+            <div class="menuCard" data-category="cold">
+                <div>
+                    <i class="fa-solid fa-bottle-droplet cardIcon"></i>
+                    <h3>Nitro Cold Brew</h3>
+                    <p>Slow-steeped cold brew infused with nitrogen for a smooth, creamy texture.</p>
+                </div>
+                <div class="cardFooter">
+                    <span class="price">$5.50</span>
+                    <button class="addCartBtn" onclick="addToCart('Nitro Cold Brew')"><i class="fa-solid fa-plus"></i></button>
+                </div>
+            </div>
+
+            <!-- Cheesecake -->
+            <div class="menuCard" data-category="dessert">
+                <div>
+                    <i class="fa-solid fa-cake-candles cardIcon"></i>
+                    <h3>Coffee Cheesecake</h3>
+                    <p>Smooth NY-style cheesecake with infused espresso flavor and chocolate crust.</p>
+                </div>
+                <div class="cardFooter">
+                    <span class="price">$6.00</span>
+                    <button class="addCartBtn" onclick="addToCart('Coffee Cheesecake')"><i class="fa-solid fa-plus"></i></button>
+                </div>
+            </div>
+
+            <!-- Croissant -->
+            <div class="menuCard" data-category="dessert">
+                <div>
+                    <i class="fa-solid fa-bread-slice cardIcon"></i>
+                    <h3>Butter Croissant</h3>
+                    <p>Flaky, golden-brown freshly baked French pastry served warm.</p>
+                </div>
+                <div class="cardFooter">
+                    <span class="price">$3.80</span>
+                    <button class="addCartBtn" onclick="addToCart('Butter Croissant')"><i class="fa-solid fa-plus"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="areasSection" id="areas">
+        <div class="section-title">
+            <h3>Explore</h3>
+            <h2>Our Cozy Areas</h2>
+        </div>
+
+        <div class="areasGrid">
+            <div class="areaCard">
+                <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=800&q=80" alt="Main Lounge" onerror="this.src='https://placehold.co/600x400/822421/ffffff?text=Main+Lounge'">
+                <div class="areaOverlay">
+                    <h3>Main Indoor Lounge</h3>
+                    <p>Relaxing atmosphere with plush seating & ambient acoustic lighting.</p>
+                </div>
+            </div>
+
+            <div class="areaCard">
+                <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=800&q=80" alt="Outdoor Patio" onerror="this.src='https://placehold.co/600x400/822421/ffffff?text=Outdoor+Garden'">
+                <div class="areaOverlay">
+                    <h3>Garden Outdoor Terrace</h3>
+                    <p>Fresh air and greenery, ideal for morning coffee routines.</p>
+                </div>
+            </div>
+
+            <div class="areaCard">
+                <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=800&q=80" alt="Work & Co-working" onerror="this.src='https://placehold.co/600x400/822421/ffffff?text=Work+Space'">
+                <div class="areaOverlay">
+                    <h3>Quiet Co-Working Zone</h3>
+                    <p>High-speed Wi-Fi, power outlets, and peaceful focus environment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contactSection" id="contact">
+        <div class="section-title">
+            <h3>Get In Touch</h3>
+            <h2>Visit Or Contact Us</h2>
+        </div>
+
+        <div class="contactContainer">
+            <form class="contactForm" id="contactForm" onsubmit="handleFormSubmit(event)">
+                <div class="formGroup">
+                    <label>Your Name</label>
+                    <input type="text" placeholder="John Doe" required>
+                </div>
+                <div class="formGroup">
+                    <label>Your Email</label>
+                    <input type="email" placeholder="john@example.com" required>
+                </div>
+                <div class="formGroup">
+                    <label>Message / Table Booking</label>
+                    <textarea rows="4" placeholder="Reserve a table or ask us a question..." required></textarea>
+                </div>
+                <button type="submit" class="btn-primary" style="border:none;">Send Message</button>
+            </form>
+
+            <div class="mapBox">
+                <i class="fa-solid fa-location-dot"></i>
+                <h3 style="font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-bottom: 10px;">Our Location</h3>
+                <p style="color: #ccc; margin-bottom: 15px;">123 Coffee Bean Street, Downtown Avenue, CA 90210</p>
+                <p style="color: var(--dectext); font-weight: 600;"><i class="fa-solid fa-clock"></i> Open Daily: 7:00 AM - 10:00 PM</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footerContainer">
+            <div class="footerCol">
+                <a href="#home" class="logo" style="margin-bottom: 15px;">
+                    <i class="fa-solid fa-mug-hot"></i> 
+                    <h2>Coffee</h2>
+                </a>
+                <p>Bringing warmth and rich flavor to your daily life, one handcrafted cup at a time.</p>
+            </div>
+
+            <div class="footerCol">
+                <h4>Quick Links</h4>
+                <a href="#home">Home</a>
+                <a href="#about">About Us</a>
+                <a href="#menu">Our Menu</a>
+                <a href="#areas">Seating Areas</a>
+            </div>
+
+            <div class="footerCol">
+                <h4>Opening Hours</h4>
+                <p>Mon - Fri: 7:00 AM - 9:00 PM</p>
+                <p>Sat - Sun: 8:00 AM - 10:00 PM</p>
+            </div>
+
+            <div class="footerCol">
+                <h4>Follow Us</h4>
+                <p>Stay connected on social media for daily specials.</p>
+                <div class="socialLinks">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2026 Coffee Shop. All Rights Reserved. Crafted with passion.
+        </div>
+    </footer>
+
+    <div class="toast" id="toastNotification">
+        <i class="fa-solid fa-circle-check"></i>
+        <span id="toastMsg">Item added to cart!</span>
+    </div>
+
+    <script src="index.js">        
+    </script>
+</body>
+</html>

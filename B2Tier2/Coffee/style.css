@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist+Pixel&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geist+Pixel&family=Playwrite+CU+Guides&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;  font-weight: 700;
+}
+:root{
+    --mainBack:#6F1E1B;
+    --dectext:#964B00;
+    --textColor:#fff;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container{
+    width: 100vw;
+    background-color:var(--mainBack);
+    min-height: 100vh;
+    max-height: object-contain;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.navBar{
+    display: flex;
+    color: var(--textColor);
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    box-shadow: #8e3734 0px 2px 5px -1px, var(--mainBack) 0px 1px 3px -1px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.navLinks{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 15px;
+}
+.navLinks > a{
+    color: white;
+    text-decoration: none;
+}
+.images{
+    background-color: var(--mainBack);
+}
+
+.homePage{
+    display: flex;
+    width: 90%;
+    height: 90vh;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.leftPage{
+    height: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+}
+.leftPage h1{
+    font-family: "Poppins", sans-serif;  font-weight: 600;
+    font-style: italic;
+    font-size: 4.5em;
+    color: var(--dectext);
+}
+.btmButton{
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+button{
+    padding: 15px 30px;
+    border: #fff;
+    border-radius: 25px;
+}
+.active{
+    background-color: var(--dectext);
+    color: var(--textColor);
+    font-size: 1.23em;
+}
+.sub{
+    font-size: 1.23em;
+    border: 3px solid var(--dectext);
+}
+
+
+.images {
+    width: 500px;
+    height: 500px;
+    background: url(./Coffee.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.hamburger{
+    display: none;
+}
+
+@media screen and (max-width: 768px){
+    .navLinks{
+        display: none;
+    }
+    .hamburger{
+        display: block;
+        font-size: 1.5em;
+        cursor: pointer;
+    }
+}
+.rightPage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
