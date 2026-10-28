@@ -7,7 +7,7 @@ public class proerityQueueDemo {
         q.offer(30);
         System.out.println(q);
         while(!q.isEmpty()){
-            System.out.print(q.poll());
+            System.out.println(q.poll());
         }
         
     }

@@ -1,4 +1,4 @@
-    import java.util.HashSet;
+import java.util.HashSet;
 
 public class HashsetDemo {
     public static void main(String[] args){
@@ -15,3 +15,9 @@ public class HashsetDemo {
     }
 
 }
+
+// Linked
+// 10->1 2
+// Double
+// 10->1 20-2
+//50->5 10->1

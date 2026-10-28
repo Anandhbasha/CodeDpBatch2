@@ -11,7 +11,7 @@ class StudentsList implements Comparable <StudentsList>{
     @Override
     public int compareTo(StudentsList other){
         // return Integer.compare(this.marks,other.marks);
-        return Integer.compare(other.marks,this.marks);
+        return Integer.compare(this.id,other.id);
         // compare(90,82)
     }
     @Override
